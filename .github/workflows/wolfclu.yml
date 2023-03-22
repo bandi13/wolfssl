@@ -18,10 +18,11 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: Docker/wolfCLU
-          file: ./Dockerfile
           platforms: linux/amd64,darwin,linux/arm64,linux/arm/v7
           pull: true
           push: true
           outputs: type=image,name=target,annotation-index.org.opencontainers.image.description=Simple wolfCLU multi-arch image
           tags: ghcr.io/wolfssl/wolfclu:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
