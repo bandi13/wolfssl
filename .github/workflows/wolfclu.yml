@@ -23,5 +23,5 @@ jobs:
           pull: true
           push: true
           outputs: type=image,name=target,annotation-index.org.opencontainers.image.description=Simple wolfCLU multi-arch image
-          tags: wolfssl/wolfclu:latest
+          tags: ghcr.io/wolfssl/wolfclu:latest
 
