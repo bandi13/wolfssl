@@ -1,0 +1,23 @@
+name: wolfCLU
+
+on:
+  push:
+  workflow_call:
+
+jobs:
+  wolfclu:
+    name: Create multi-arch image
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build and push Docker image
+        uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+        with:
+          context: Docker/wolfCLU
+          file: ./Dockerfile
+          platforms: linux/amd64,darwin,linux/arm64,linux/arm/v7
+          pull: true
+          push: true
+          outputs: type=image,name=target,annotation-index.org.opencontainers.image.description=Simple wolfCLU multi-arch image
+          tags: wolfssl/wolfclu:latest
+
