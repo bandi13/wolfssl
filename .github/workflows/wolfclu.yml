@@ -18,7 +18,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: Docker/wolfCLU
-          platforms: linux/amd64,darwin,linux/arm64,linux/arm/v7
+          platforms: linux/amd64
           pull: true
           push: true
           outputs: type=image,name=target,annotation-index.org.opencontainers.image.description=Simple wolfCLU multi-arch image
