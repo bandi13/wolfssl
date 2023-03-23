@@ -8,7 +8,7 @@ jobs:
   wolfclu:
     name: Create multi-arch image
     runs-on: ubuntu-latest
-    if: ${{ github.repository_owner == 'wolfssl' }}
+    if: ${{ github.repository_owner == 'bandi13' }}
     steps:
       - uses: actions/checkout@v3
       - name: Set up QEMU
