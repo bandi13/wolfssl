@@ -38,7 +38,8 @@ jobs:
       - name: Clean up untagged packages
         uses: actions/delete-package-versions@v4
         with:
-          package-name: 'bandi13/wolfclu'
+          owner: 'bandi13'
+          package-name: 'wolfclu'
           package-type: 'container'
           min-versions-to-keep: 5
           delete-only-untagged-versions: 'true'
