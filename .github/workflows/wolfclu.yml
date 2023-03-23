@@ -28,7 +28,7 @@ jobs:
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           build-args: |
             NUM_CPU=4
-            DUMMY=${{ github.sha }}
+#            DUMMY=${{ github.sha }}
           pull: true
           push: true
           outputs: type=image,name=target,annotation-index.org.opencontainers.image.description=Simple wolfCLU multi-arch image
